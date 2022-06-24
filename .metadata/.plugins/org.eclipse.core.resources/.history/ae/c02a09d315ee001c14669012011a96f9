@@ -1,0 +1,7 @@
+package fr.diginamic.java17.gestiondepersonnes.classes;
+
+public abstract class Personne {
+	private String nom;
+	private String prenom;
+
+}

@@ -1,0 +1,17 @@
+package diginamic_jpa;
+
+import jakarta.persistence.EntityManager;
+
+public class ConnectionJpa {
+	private static EntityManagegerFactory sessionFactory;
+	
+	protected static void setUp() {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+
+}

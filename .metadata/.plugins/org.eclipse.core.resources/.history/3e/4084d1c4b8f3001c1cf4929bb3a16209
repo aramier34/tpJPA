@@ -1,0 +1,15 @@
+package diginamic_jpa;
+
+import java.time.LocalDate;
+
+public class Personne {
+
+	private int id;
+	Stringn nom (limite à 64 chars ET non null)
+	String prénom (limite à 64 chars ET non null)
+	String téléphone;
+	genre (énumération)
+	private LocalDate dateNaissance;
+	boolean actif;
+
+}

@@ -1,0 +1,11 @@
+package diginamic_jpa;
+
+public class ConnectionJpa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+
+}

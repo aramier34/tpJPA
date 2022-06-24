@@ -1,0 +1,16 @@
+package diginamic_jpa;
+
+import java.time.LocalDate;
+
+@Entity
+public class Personne {
+
+	private int id;
+	String nom;
+	String prénom;
+	private String téléphone;
+	private Genre genre;
+	private LocalDate dateNaissance;
+	boolean actif;
+
+}

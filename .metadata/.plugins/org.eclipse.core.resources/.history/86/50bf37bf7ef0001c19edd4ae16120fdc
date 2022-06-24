@@ -1,0 +1,22 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import fr.diginamic.java17.gestiondepersonnes.classes.Facteur;
+import fr.diginamic.java17.gestiondepersonnes.classes.Personne;
+import fr.diginamic.java17.gestiondepersonnes.enums.Genre;
+
+public class AppStream02Reduce {
+
+ public static void main(String[] args) {
+// TODO Auto-generated method stub
+List<Personne> lp = new ArrayList<>();
+lp.add(new Facteur("Fact01","jean",Genre.MR,20));
+lp.add(new Facteur("Fact02","martine",Genre.MME,50));
+lp.add(new Facteur("Fact03","pauline",Genre.MELLE,30));
+lp.add(new Facteur("Fact04","paul",Genre.MR,55));
+
+}
+}

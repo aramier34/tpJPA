@@ -1,0 +1,20 @@
+package diginamic_jpa;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Personne {
+
+	@Id
+	private long id;
+	private String nom;
+	private String prénom;
+	private String téléphone;
+	private Genre genre;
+	private LocalDate dateNaissance;
+	boolean actif;
+
+}

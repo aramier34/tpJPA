@@ -1,0 +1,19 @@
+package fr.diginamic.java17.gestiondepersonnes.classes;
+
+import fr.diginamic.java17.gestiondepersonnes.enums.Genre;
+
+public abstract class Personne {
+	private String nom;
+	private String prenom;
+	private Genre genre;
+	
+	public Personne(String nom, String prenom, Genre genre) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.genre=genre;
+	}
+	
+	
+
+}

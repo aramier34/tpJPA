@@ -1,0 +1,41 @@
+package tp15.files;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class TestFilesNIO {
+
+	public static void main(String[] args) {
+
+		System.out.println(System.getProperty("file.separator"));
+		Path path = Paths.get("C:\\Users\\formation\\Documents\\tp_java\\donnees_communes.csv");
+	
+		System.out.println(path.getRoot());
+		System.out.println(path.getParent());
+		System.out.println(path.getFileName());
+		
+		boolean estFichier = Files.isRegularFile(path);
+		
+		if(estFichier) {
+			System.out.println("cest un fichier");
+			
+		}
+		
+		boolean estLisible = Files.isReadable(path);
+		
+		
+		if(estLisible) {
+			System.out.println("il est lisible");
+			
+			boolean estRepertoire = Files.isDirectory(path);
+			if(estRepertoire) {
+				System.out.println("cest un repertoire");
+			}else{
+				System.out.println("ce nest pas un repertoire");
+			}
+		}
+	}
+	
+
+}

@@ -1,0 +1,96 @@
+package fr.diginamic.java17.gestiondepersonnes.classes;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.function.ToDoubleFunction;
+import java.util.stream.Collectors;
+
+public class PersonneServices {
+	
+	public static Optional<Personne> findByNamePersonne(
+			List<Personne> lp, String nom){
+		
+		for(Personne p :lp) {
+			if(p.getNom().equalsIgnoreCase(nom)) {
+				return Optional.of(p);
+			}
+		}
+		
+		return Optional.empty();
+	}
+	/**
+	* .reduce((ageCalculee,ageCourant)->ageCalculee+ageCourant)
+	* @param cumul
+	* @param valeurEnCours
+	* @return le nouveau cumul
+	*/
+	public static Integer somme(Integer cumul,Integer valeurEnCours) {
+	return cumul + valeurEnCours;
+	}
+	/**
+	* Service pour récupérer la somme par exemple à partir
+	* d'un stream d'une liste de type Personne
+	*
+	* return lp.stream() //Point dépard c'est le stream() de ma liste
+	.map(???) //je cible sur quoi je vais travailler
+	.reduce(???);
+	*
+	*/
+	public static Optional<Integer> calculSommeAge(List<Personne> maListedePersonnes){
+	return maListedePersonnes
+	.stream()
+	.map(Personne::getAge)
+	.reduce(PersonneServices::somme);
+	//return Optional.empty();
+	
+	}
+	/**
+	* Ecrire le AppStream03Reduce qui utilise PersoneServices
+	* le faire fonctionner la méthode calculSommeAge
+	*/
+	
+	
+	
+	
+	/**
+	* Ecrire une méthode retournant la moyenne des Ages
+	*
+	*/
+	public static Double calculeMoyenne(
+	List<Personne> maListedePersonnes,
+	ToDoubleFunction<? super Personne> op) { //op = Personne::getAge
+	return maListedePersonnes.stream().//Un stream<Personne>
+	collect(
+	/**
+	collect me permet de lancer des traitements soient de type
+	ou d'agrégats (moyenne, count ....)
+	*/
+	Collectors.averagingDouble(op)
+	/**
+	* Collectors.averagingDouble
+	* je fais une moyenne(sur op) et retourne le résultat en Double
+	* op c'est une expression lambda passé en parémètre
+	* ToDoubleFunction<? super Personne> op
+	* Le type ToDoubleFunction<? super Personne>
+	* est imposé par la méthode averagingDouble
+	* VOIR la JDK
+	*/
+	);
+	}
+	
+	/**
+	* Nombre des âges pour âges >= 50 de la liste de Personne
+	* Nombre des Genre.MR de la liste de Personne
+	*
+	*/
+	public static Long getCumul(List<Personne> maListedePersonnes,
+	Predicate<? super Personne> monFiltre) {
+	return maListedePersonnes.stream()
+	.filter(monFiltre)
+	.collect(Collectors.counting());
+	}
+			
+			
+			
+	
+

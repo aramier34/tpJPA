@@ -1,0 +1,56 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import fr.diginamic.java17.gestiondepersonnes.classes.Facteur;
+import fr.diginamic.java17.gestiondepersonnes.classes.Personne;
+import fr.diginamic.java17.gestiondepersonnes.enums.Genre;
+
+public class AppStream02Reduce {
+
+	public static void main(String[] args) {
+// TODO Auto-generated method stub
+		List<Personne> lp = new ArrayList<>();
+		lp.add(new Facteur("Fact01", "jean", Genre.Mr, 20));
+		lp.add(new Facteur("Fact02", "martine", Genre.Mme, 50));
+		lp.add(new Facteur("Fact03", "pauline", Genre.Melle, 30));
+		lp.add(new Facteur("Fact04", "paul", Genre.Mr, 55));
+
+		
+		/**
+		* 1 Cumul de tous les âges de la liste de Personne
+		* 2 Cumul des âges pour les Genre.MME de la liste de Personne
+		* 3 Cumul des âges pour âges >= 50 de la liste de Personne
+		* 4 Nombre des âges pour âges >= 50 de la liste de Personne
+		* 5 Count des Genre.MR de la liste de Personne
+		*/
+		
+		/**
+		 * 1 Cumul de tous les âges de la liste de Personne
+		 */
+		
+		int cumul= lp.stream().//point de départ c'est le stream() de ma liste
+				map(p->p.getAge()).//je cible sur quoi je vais travailler
+				reduce((ageCalcule,ageCourant)->ageCalcule+ageCourant)
+				//Traitement attendu : je mets en place l'agrégat
+				// de la formule de calcul attendu (CUMUL)
+				.get();
+		System.out.println(cumul);
+		
+		
+		/**
+		 * 2 Cumul des âges pour les Genre.MME de la liste de Personne
+		 */
+		int cumulMme = lp.stream() // Point dépard c'est le stream() de ma liste
+				.filtrer(p->p.getGenre(==Genre.Mme)
+				.map(p -> p.getAge()) // je cible sur quoi je vais travailler
+				.reduce((ageCalculee, ageCourant) -> ageCalculee + ageCourant)
+				// Traitement attendu : je mets en place l'agrégat
+				// de la formule de calcul attendu (CUMUL)
+				.get();
+		System.out.println(cumulMme);
+		
+	}
+}

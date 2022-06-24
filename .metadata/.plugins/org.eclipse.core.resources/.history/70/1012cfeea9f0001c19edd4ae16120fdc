@@ -1,0 +1,12 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.time
+
+public class AppLocalDateTime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

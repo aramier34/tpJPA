@@ -1,0 +1,36 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import fr.diginamic.java17.gestiondepersonnes.classes.Personne;
+import fr.diginamic.java17.gestiondepersonnes.classes.PersonneServices;
+import fr.diginamic.java17.gestiondepersonnes.classes.Vehicle;
+import fr.diginamic.java17.gestiondepersonnes.classes.Voiture;
+import fr.diginamic.java17.gestiondepersonnes.classes.VoiturePoste;
+
+public class AppOptionalVoiture {
+
+	public static void main(String[] args) {
+
+		List<Voiture> vs = new ArrayList<>();
+		vs.add(new VoiturePoste("az-258-ze"));
+		vs.add(new VoiturePoste("bc-369-ed"));
+		vs.add(new VoiturePoste("az-147-fd"));
+		vs.add(new VoiturePoste("df-425-de"));
+		vs.add(new VoiturePoste("ol-789-mo"));
+
+		Optional<Personne> op =
+				PersonneServices.findByNamePersonne(lf,"jolie");
+		if(op.isEmpty()) { 
+			System.out.println("Personne non trouvée");
+		}
+		if(op.isPresent()) {
+			System.out.println("personne trouvée : "+ op.get());
+		}	
+		
+		
+	}
+
+}

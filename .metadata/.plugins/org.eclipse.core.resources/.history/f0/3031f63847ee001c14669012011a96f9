@@ -1,0 +1,28 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import fr.diginamic.java17.gestiondepersonnes.classes.Facteur;
+import fr.diginamic.java17.gestiondepersonnes.classes.Personne;
+import fr.diginamic.java17.gestiondepersonnes.classes.PersonneServices;
+
+public class AppOptional {
+	public static void main(String[] args) {
+		
+		List<Personne> lf = new ArrayList<>();
+		lf.add(new Facteur(" Joly", "Sylvie", Genre.Melle));
+		Optional<Personne> op =
+				PersonneServices.findByNamePersonne(lf,"");
+		if(op.isEmpty()) { 
+			System.out.println("Personne non trouvée");
+		}
+		if(op.isPresent()) {
+			System.out.println("personne trouvée : "+ op.get().getNom());
+		}
+		
+		
+	}
+
+}

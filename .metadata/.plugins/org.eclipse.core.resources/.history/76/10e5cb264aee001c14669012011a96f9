@@ -1,0 +1,22 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.diginamic.java17.gestiondepersonnes.classes.Vehicle;
+import fr.diginamic.java17.gestiondepersonnes.classes.Voiture;
+
+public class AppOptionalVoiture {
+
+	public static void main(String[] args) {
+
+		List<Voiture> vs = new ArrayList<>();
+		vs.add(new VoiturePoste("az-258-ze"));
+		vs.add(new VoiturePost("az-258-ze"));
+		vs.add(new Vehicle("az-258-ze"));
+		vs.add(new Vehicle("az-258-ze"));
+		vs.add(new Vehicle("az-258-ze"));
+
+	}
+
+}

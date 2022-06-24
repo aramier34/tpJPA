@@ -1,0 +1,15 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.time.*;
+
+public class AppLocalDateTime {
+
+	public static void main(String[] args) {
+		// 2016-01-15T15:14:15.662+01:00[Europe/Paris]
+		System.out.println(ZonedDateTime.now());
+		
+		//2016-07-02T16:52:25.374-04:00[America/Indiana/Indianapolis]
+		System.out.println(ZonedDateTime.now(ZoneId.of("America/Indiana/Indianapolis")));
+	}
+
+}

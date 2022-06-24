@@ -1,0 +1,5 @@
+package fr.diginamic.java17.gestiondepersonnes.classes;
+
+public class VoiturePoste extends Voiture {
+
+}

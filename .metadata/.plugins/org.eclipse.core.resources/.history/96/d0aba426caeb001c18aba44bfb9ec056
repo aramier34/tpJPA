@@ -1,0 +1,14 @@
+package tp15.files;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class TestFilesNIO {
+
+	public static void main(String[] args) {
+
+		
+		Path path = Paths.get("C:/Users/formation/Documents/tp java/donnes_communes.csv");
+	}
+
+}

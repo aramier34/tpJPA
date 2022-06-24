@@ -1,0 +1,11 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.util.Optional;
+
+import fr.diginamic.java17.gestiondepersonnes.classes.Voiture;
+
+public class VoitureService {
+
+	public static Optional<Voiture> findByNameVoiture(
+			List<Voiture> )
+}

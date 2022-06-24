@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="entities.Personne"/>
+    <fullyQualifiedTypeName name="entities.TestAdressePostale"/>
+    <fullyQualifiedTypeName name="geometrie.ObjetGeometrique"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.nio.file.Path"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.nio.file.StandardCopyOption"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.nio.file.DirectoryStream"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.interfaces.Ifacteur"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.classes.PersonneServices"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.classes.Vehicle"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.classes.VoiturePoste"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.classes.Voiture"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.classes.Personne"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.enums.Genre"/>
+    <fullyQualifiedTypeName name="fr.diginamic.java17.gestiondepersonnes.classes.Facteur"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="java.util.function.BinaryOperator"/>
+    <fullyQualifiedTypeName name="java.util.function.ToDoubleFunction"/>
+    <fullyQualifiedTypeName name="java.util.function.Predicate"/>
+</qualifiedTypeNameHistroy>

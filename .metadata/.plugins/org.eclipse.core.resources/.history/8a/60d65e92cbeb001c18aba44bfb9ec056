@@ -1,0 +1,20 @@
+package tp15.files;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class TestFilesNIO {
+
+	public static void main(String[] args) {
+
+		System.out.println(System.getProperty("file.separator"));
+		Path path = Paths.get("C:/Users/formation/Documents/tp java/donnes_communes.csv");
+	
+		System.out.println(path.getRoot());
+		System.out.println(path.getParent());
+		System.out.println(path.getFileName());
+
+	}
+	
+
+}

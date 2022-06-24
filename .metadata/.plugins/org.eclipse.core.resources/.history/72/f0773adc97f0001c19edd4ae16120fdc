@@ -1,0 +1,73 @@
+package fr.diginamic.java17.gestiondepersonnes.classes;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class PersonneServices {
+	
+	public static Optional<Personne> findByNamePersonne(
+			List<Personne> lp, String nom){
+		
+		for(Personne p :lp) {
+			if(p.getNom().equalsIgnoreCase(nom)) {
+				return Optional.of(p);
+			}
+		}
+		
+		return Optional.empty();
+	}
+	/**
+	* .reduce((ageCalculee,ageCourant)->ageCalculee+ageCourant)
+	* @param cumul
+	* @param valeurEnCours
+	* @return le nouveau cumul
+	*/
+	public static Integer somme(Integer cumul,Integer valeurEnCours) {
+	return cumul + valeurEnCours;
+	}
+	/**
+	* Service pour récupérer la somme par exemple à partir
+	* d'un stream d'une liste de type Personne
+	*
+	* return lp.stream() //Point dépard c'est le stream() de ma liste
+	.map(???) //je cible sur quoi je vais travailler
+	.reduce(???);
+	*
+	*/
+	public static Optional<Integer> calculSommeAge(List<Personne> maListedePersonnes){
+	return maListedePersonnes
+	.stream()
+	.map(Personne::getAge)
+	.reduce(PersonneServices::somme);
+	//return Optional.empty();
+	
+	
+	/**
+	* Ecrire le AppStream03Reduce qui utilise PersoneServices
+	* le faire fonctionner la méthode calculSommeAge
+	*/
+	
+	
+	}
+	
+	/**
+	* Ecrire une méthode retournant la moyenne des Ages
+	*/
+	
+	double moyenneAgeCollect = lp.stream().
+			collect(Collectors.averagingDouble(Personne::getAge));//p->p.getAge()
+			System.out.println(moyenneAgeCollect);
+	
+	/**
+	* Nombre des âges pour âges >= 50 de la liste de Personne
+	* Nombre des Genre.MR de la liste de Personne
+	*/
+			long nombrePlusEq50 = lp.stream() // Point dépard c'est le stream() de ma liste
+					.filter(p -> p.getAge() >= 50).count();
+			System.out.println(nombrePlusEq50);
+			
+			
+			
+	}
+

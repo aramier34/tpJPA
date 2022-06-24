@@ -1,0 +1,13 @@
+package diginamic_jpa;
+
+public class Personne {
+
+	id
+	Stringn nom (limite à 64 chars ET non null)
+	String prénom (limite à 64 chars ET non null)
+	String téléphone;
+	genre (énumération)
+	date dateNaissance;
+	boolean actif;
+
+}

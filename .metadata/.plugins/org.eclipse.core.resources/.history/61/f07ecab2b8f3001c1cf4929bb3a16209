@@ -1,0 +1,7 @@
+package diginamic_jpa;
+
+public enum Genre {
+	
+	
+
+}

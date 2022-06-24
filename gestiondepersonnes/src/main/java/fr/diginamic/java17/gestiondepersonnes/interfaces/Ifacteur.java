@@ -1,0 +1,22 @@
+package fr.diginamic.java17.gestiondepersonnes.interfaces;
+
+public interface Ifacteur {
+	
+	/**
+	 * depuis java 11 on peut mettre un comprtement par defaut dans une interface sans quer la classe qui l'implémente la surchage
+	 * 
+	 * on doit surcharger les méthodes d'une interface quand elle est implémentée dans une classe impléments
+	 */
+	
+	default void trier() {
+		System.out.println("je trie par defaut !");
+	}
+	
+	/**
+	 * objet distribuer()
+	 * doit être surchargée @override
+	 * @return
+	 */
+	Object distribuer();
+
+}

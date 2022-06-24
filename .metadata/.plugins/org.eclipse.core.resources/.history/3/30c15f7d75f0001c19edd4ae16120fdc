@@ -1,0 +1,44 @@
+package fr.diginamic.java17.gestiondepersonnes;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import fr.diginamic.java17.gestiondepersonnes.classes.Facteur;
+import fr.diginamic.java17.gestiondepersonnes.classes.Personne;
+import fr.diginamic.java17.gestiondepersonnes.enums.Genre;
+
+public class AppStream01Collect {
+
+	public static void main(String[] args) {
+
+List<Personne> lp = new ArrayList();
+lp.add(new Facteur ("Fact01", "Jean", Genre.Mr));
+lp.add(new Facteur ("Fact02", "martine", Genre.Mme));
+lp.add(new Facteur ("Fact03", "pauline", Genre.Melle));
+lp.add(new Facteur ("Fact04", "paul", Genre.Mr));
+
+/**
+ * 1 récupérer la liste des noms de facteurs
+ * 2 récupérer les noms des facteurs dans une chaine (sans séparateur explicite)
+ * 3 récupérer les noms des facteurs dans une chaine (avec ;)
+ */
+
+//1
+
+/**
+ * LIst<String>lnoms c'est le resultat attendu-> IMPOSER
+ * EN STREAM ? lp.stream
+ * nom des facterus : map(p->p.getNom()) -> mettre en mémoire
+ * ma liste : List<Personne> => uniquu
+ * 
+ */
+List<String> lnoms= lp.stream().map(p->p.getNom()).collect(Collectors.toList());
+/**
+ * 
+ */
+
+lnoms.forEach(System.out::println);
+	}
+
+}
